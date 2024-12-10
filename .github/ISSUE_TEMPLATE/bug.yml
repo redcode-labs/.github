@@ -1,0 +1,39 @@
+name: Bug
+description: Create a report to help us improve/fix the issue
+labels: [bug]
+body: 
+
+  - type: markdown
+    attributes:
+      value: |
+        **Before reporting:**
+        - Search currently [existing issues](https://github.com/search?q=user%3Aredcode-labs+label%3Abug+is%3Aopen&type=issues&ref=advsearch), including [closed](https://github.com/search?q=user%3Aredcode-labs+label%3Abug+is%3Aclosed&type=issues&ref=advsearch)
+        - Confirm the issue is reproducible on latest **main**/**master** branch or **latest** release
+
+  - type: textarea
+    attributes:
+      label: "Problem"
+      description: "Describe the bug"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "Steps to reproduce"
+      description: "Steps to reproduce this behavior"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "Expected behavior"
+      description: "Description of what you expected to happen"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+     label: "Additional context"
+     description: "Add any other context or screenshots about the bug in this section"
+    validations:
+      required: false
