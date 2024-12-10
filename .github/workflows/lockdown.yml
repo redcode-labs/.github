@@ -1,0 +1,23 @@
+# Configure the Repo Lockdown GitHub App to automatically close pull requests.
+# See https://github.com/dessant/repo-lockdown
+
+name: 'Repo Lockdown'
+
+on:
+  issues:
+    types: opened
+  pull_request_target:
+    types: opened
+
+permissions:
+  pull-requests: write
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Repo Lockdown'
+        uses: dessant/repo-lockdown@v4
+        with:
+          pr-comment: >
+            Sorry, this repo doesn't allow PRs!
